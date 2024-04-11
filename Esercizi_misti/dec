@@ -1,0 +1,10 @@
+% slide 109 da logica a CLP
+% decrescenti
+
+:- lib(fd).
+
+ordina([]).
+
+ordina([_]):-!.
+
+ordina([A,B|T]):- A#>B, ordina([B|T]).
